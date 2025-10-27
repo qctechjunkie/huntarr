@@ -1,0 +1,16 @@
+# Huntarr - Music Discovery and Organization
+# Discovers new music and integrates with Lidarr for automated downloads
+
+services:
+  huntarr:
+    image: huntarr/huntarr:latest
+    container_name: huntarr
+    environment:
+      - PUID=${PUID}
+      - PGID=${PGID}
+      - TZ=${TZ}
+    volumes:
+      - ${CONFIG_PATH}:/config
+    ports:
+      - "${HUNTARR_PORT}:9705"
+    restart: ${RESTART_POLICY}

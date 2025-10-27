@@ -1,0 +1,25 @@
+# Environment files
+.env
+.env.local
+.env.production
+
+# Huntarr data directory
+config/
+
+# Docker override files
+docker-compose.override.yml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
