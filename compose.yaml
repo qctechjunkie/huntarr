@@ -14,3 +14,9 @@ services:
     ports:
       - "${HUNTARR_PORT}:9705"
     restart: ${RESTART_POLICY}
+    networks:
+      - arrnetwork
+
+networks:
+  arrnetwork:
+    external: true
